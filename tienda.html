@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda - FOREST PROJECT</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="img/logo.png" alt="Logo" width="70">
+    <div class="logo">FOREST PROJECT</div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href ="index.html">Inicio</a></li>
+      <li><a href ="quienessomos.html">Quiénes Somos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Tienda Online</h1>
+  <p>
+    En nuestra tienda ofrecemos productos y servicios orientativos relacionados con la
+    sostenibilidad, la monitorización ambiental y la gestión responsable de recursos.
+  </p>
+
+  <section class="section">
+    <h2>🛒 Carrito</h2>
+    <ul id="carrito">
+      <li>El carrito está vacío</li>
+    </ul>
+  </section>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="img/Kitsensores.jpg" alt="Kit de sensores ambientales">
+      <h3>Kit Básico de Sensores Ambientales</h3>
+      <p>
+        Incluye sensores de temperatura, humedad y consumo energético para instalaciones
+        pequeñas o proyectos educativos.
+      </p>
+      <button onclick="agregarProducto('Kit Básico de Sensores Ambientales')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="img/Sensoravanzado.jpg" alt="Sensor ambiental avanzado">
+      <h3>Sensor Ambiental Avanzado</h3>
+      <p>
+        Sensor IoT de alta precisión para monitorización continua en entornos industriales
+        o rurales.
+      </p>
+      <button onclick="agregarProducto('Sensor Ambiental Avanzado')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="img/suscripcion.jpg" alt="Suscripción plataforma">
+      <h3>Suscripción de Monitorización</h3>
+      <p>
+        Acceso mensual a la plataforma digital para análisis de datos ambientales y generación
+        de informes.
+      </p>
+      <button onclick="agregarProducto('Suscripción de Monitorización')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="img/informe.jpg" alt="Informe ESG">
+      <h3>Informe ESG Personalizado</h3>
+      <p>
+        Análisis ambiental, social y de gobernanza adaptado a las necesidades de la empresa.
+      </p>
+      <button onclick="agregarProducto('Informe ESG Personalizado')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="img/auditoria.jpg" alt="Auditoría energética">
+      <h3>Auditoría Energética</h3>
+      <p>
+        Evaluación del consumo energético y propuesta de mejoras basadas en energías renovables.
+      </p>
+      <button onclick="agregarProducto('Auditoría Energética')">Comprar</button>
+    </div>
+
+    <div class="card">
+      <img src="img/formacion.jpg" alt="Formación ambiental">
+      <h3>Programa de Formación Ambiental</h3>
+      <p>
+        Formación dirigida a empresas y centros educativos sobre sostenibilidad y cambio climático.
+      </p>
+      <button onclick="agregarProducto('Programa de Formación Ambiental')">Comprar</button>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <ul>
+    <li><a href="privacidad.html">Privacidad</a></li>
+    <li><a href="cookies.html">Cookies</a></li>
+  </ul>
+  <p>© 2026 FOREST PROJECT</p>
+</footer>
+
+<!-- SCRIPT DEL CARRITO -->
+<script>
+  const carrito = document.getElementById("carrito");
+
+  function agregarProducto(nombre) {
+    if (carrito.children[0].textContent === "El carrito está vacío") {
+      carrito.innerHTML = "";
+    }
+
+    const item = document.createElement("li");
+    item.textContent = nombre;
+    carrito.appendChild(item);
+  }
+</script>
+
+</body>
+</html>
